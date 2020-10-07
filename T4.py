@@ -20,7 +20,8 @@ def find_histogram(labels):
     :return:hist
     """
     #len(np.unique(labels))+1
-    nlabels = np.arange(0,len(np.unique(labels))+1)
+    #nlabels = np.arange(0,len(np.unique(labels))+1)
+    nlabels = 6
     (hist, _) = np.histogram(labels, bins=nlabels)
     hist = hist.astype("float")
     hist /= hist.sum()
