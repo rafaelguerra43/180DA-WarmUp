@@ -21,7 +21,7 @@ def find_histogram(labels):
     """
     #len(np.unique(labels))+1
     #nlabels = np.arange(0,len(np.unique(labels))+1)
-    nlabels = 6
+    nlabels = 5
     (hist, _) = np.histogram(labels, bins=nlabels)
     hist = hist.astype("float")
     hist /= hist.sum()
@@ -45,7 +45,7 @@ while(True):
         #capture frame-by-frame
     ret, frame = cap.read()
     frame = cv2.flip(frame, 1)
-    cv2.rectangle(frame, (160,120),(480,360),(0,255,0),2)
+    cv2.rectangle(frame, (155,115),(485,365),(0,255,0),2)
 
     rec = frame[120:360,160:480] #height first! then the width
     colRec = rec.reshape((-1,3))
